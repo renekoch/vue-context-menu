@@ -43,7 +43,7 @@ export default {
       default: 10,
       offsetValidate
     },
-    position: {type: String, defailt : ''}
+    position: {type: String, default : ''}
   },
   data() {
     return {

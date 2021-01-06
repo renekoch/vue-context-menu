@@ -29,7 +29,6 @@ Context Menu for VueJS
 ### Example
 
 ```vue
-<template>
 <ContextMenu ref="menu" :offset="5" position="bottom center">
   <ul>
     <li @click="$refs.menu.close()">Item 1</li>
@@ -39,12 +38,5 @@ Context Menu for VueJS
 </ContextMenu>
 
 <button @contextmenu="$refs.menu.show($event)"> show menu</button>
-</template>
 
-<script>
-import ContextMenu from 'vue-context-menu/ContextMenu.vue';
-export default {
-  components: {ContextMenu},
-}
-</script>
 ```

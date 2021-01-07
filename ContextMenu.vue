@@ -63,7 +63,6 @@ export default {
      */
     offsets() {
       const offset = this.override_offset || this.offset;
-      console.log('offset', {offset});
       if (isNumber(offset)) return {x: offset, y: offset};
       if (Array.isArray(offset)) return {x: offset[0], y: offset[1]};
       return offset;

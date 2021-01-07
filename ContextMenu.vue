@@ -229,7 +229,7 @@ export default {
   z-index: 100;
   outline: none;
 }
-//Transitions
+
 .vcm-context-menu.vcm-fade-enter-active,
 .vcm-context-menu.vcm-fade-leave-active {
   transition: opacity .1s;

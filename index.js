@@ -1,11 +1,12 @@
-import ContextMenu from './ContextMenu.vue'
+import ContextMenu from './ContextMenu.vue';
 
+export {ContextMenu};
 export default {
   /**
-   * @param {Vue} Vue - Vue instance
+   * @param {Object} Vue - Vue instance
    * @param {Object} options
    */
   install(Vue, options = {}) {
-    Vue.component(options.tag || 'vue-context-menu', ContextMenu)
-  }
-}
+    Vue.component(options.tag || 'vue-context-menu', ContextMenu);
+  },
+};

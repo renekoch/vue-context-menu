@@ -35,7 +35,7 @@ Context Menu for VueJS
     <li @click="$refs.menu.close()">Item 2</li>
     <li @click="$refs.menu.close()">Item 3</li>
   </ul>
-</<vue-context-menu>
+</vue-context-menu>
 
 <button @contextmenu="$refs.menu.show($event)"> show menu</button>
 

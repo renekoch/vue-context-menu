@@ -29,13 +29,13 @@ Context Menu for VueJS
 ### Example
 
 ```vue
-<ContextMenu ref="menu" :offset="5" position="bottom center">
+<vue-context-menu ref="menu" :offset="5" position="bottom center">
   <ul>
     <li @click="$refs.menu.close()">Item 1</li>
     <li @click="$refs.menu.close()">Item 2</li>
     <li @click="$refs.menu.close()">Item 3</li>
   </ul>
-</ContextMenu>
+</<vue-context-menu>
 
 <button @contextmenu="$refs.menu.show($event)"> show menu</button>
 

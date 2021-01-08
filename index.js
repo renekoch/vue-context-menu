@@ -6,6 +6,6 @@ export default {
    * @param {Object} options
    */
   install(Vue, options = {}) {
-    Vue.component('vue-context-menu', ContextMenu)
+    Vue.component(options.tag || 'vue-context-menu', ContextMenu)
   }
 }

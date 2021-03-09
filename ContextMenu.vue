@@ -43,7 +43,8 @@ export default {
       default: 10,
       offsetValidate
     },
-    position: {type: String, default : ''}
+    zIndex: {type: Number, default: 1000},
+    position: {type: String, default: ''}
   },
   data() {
     return {
@@ -95,8 +96,7 @@ export default {
         this.bottom = bottom;
         this.right = right;
         this.pos = '' + position;
-      }
-      else {
+      } else {
         this.left = evt.pageX;
         this.top = evt.pageY;
         this.pos = '';
@@ -122,9 +122,9 @@ export default {
       const menu = this.$refs.menu;
       const {height, width} = menu.getBoundingClientRect();
       const {innerWidth, innerHeight} = window;
-      const style = {};
-      let {top, right, bottom, left, pos} = this;
+      let {top, right, bottom, left, pos, zIndex} = this;
       const offset = this.offsets;
+      const style = {'z-index': zIndex};
       if (pos) {
         pos = pos.toLowerCase().split(/\W/).filter((value, index, self) => self.indexOf(value) === index).sort().join(' ');
         let x, y;
@@ -190,19 +190,16 @@ export default {
           default:
             style.top = (bottom + offset.y) + 'px';
         }
-      }
-      else {
+      } else {
         if ((width + left) >= innerWidth) {
           left = left - width + offset.x;
-        }
-        else {
+        } else {
           left = left - offset.x;
         }
 
         if ((height + top) >= innerHeight) {
           top = top - height + offset.y;
-        }
-        else {
+        } else {
           top = top - offset.y;
         }
 
@@ -220,12 +217,11 @@ export default {
 }
 </script>
 
-<style  scoped>
+<style scoped>
 .vcm-context-menu {
   position: absolute;
   left: -100vw;
   top: -100vh;
-  z-index: 100;
   outline: none;
 }
 
